@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Passport | Power Link Africa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4 md:p-10">
+    <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div class="bg-green-700 p-8 text-white flex justify-between items-center">
+            <div>
+                <p class="text-sm uppercase tracking-widest opacity-80">Official Digital Passport</p>
+                <h1 id="displayID" class="text-3xl font-mono font-bold">LOADING...</h1>
+            </div>
+            <div id="statusBadge" class="bg-green-500 px-4 py-1 rounded-full text-sm font-bold">ACTIVE</div>
+        </div>
+
+        <div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+                <h2 class="text-gray-400 font-bold uppercase text-xs tracking-wider">3-Point Health Audit</h2>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="text-gray-600">Terminal Voltage</span>
+                    <span id="voltage" class="font-bold text-green-700 font-mono">--</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="text-gray-600">Specific Gravity</span>
+                    <span id="gravity" class="font-bold text-green-700 font-mono">--</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="text-gray-600">Physical Integrity</span>
+                    <span id="integrity" class="font-bold text-green-700">--</span>
+                </div>
+            </div>
+
+            <div class="space-y-6 bg-gray-50 p-6 rounded-xl">
+                <h2 class="text-gray-400 font-bold uppercase text-xs tracking-wider">Lifecycle Info</h2>
+                <p class="text-sm text-gray-600">Installation Date: <span id="installDate" class="font-bold text-gray-900">--</span></p>
+                <p class="text-sm text-gray-600">Expected End-of-Life: <span id="expiryDate" class="font-bold text-gray-900">--</span></p>
+                <div class="mt-4 p-4 bg-green-100 rounded-lg">
+                    <p class="text-xs text-green-800 font-bold">Estimated Buy-Back Value:</p>
+                    <p id="buyback" class="text-lg font-bold text-green-900">--</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-8 border-t bg-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-gray-400">Owner: Power Link Authorized SME</p>
+            <button class="bg-black text-white px-6 py-3 rounded-xl font-bold text-sm w-full md:w-auto">Request Buy-Back Credit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
