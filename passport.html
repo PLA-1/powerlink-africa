@@ -1,53 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battery Passport | Power Link Africa</title>
+    <title>Digital Passport Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100 p-4 md:p-10">
-    <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden">
-        <div class="bg-green-700 p-8 text-white flex justify-between items-center">
-            <div>
-                <p class="text-sm uppercase tracking-widest opacity-80">Official Digital Passport</p>
-                <h1 id="displayID" class="text-3xl font-mono font-bold">LOADING...</h1>
-            </div>
-            <div id="statusBadge" class="bg-green-500 px-4 py-1 rounded-full text-sm font-bold">ACTIVE</div>
+<body class="bg-[#0a0a0a] text-white p-6 md:p-12">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-center mb-12">
+            <h1 class="text-4xl font-serif italic" id="displayID">PLA-SERIAL</h1>
+            <a href="index.html" class="opacity-50 hover:opacity-100 text-sm tracking-widest uppercase">← BACK</a>
         </div>
 
-        <div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="space-y-6">
-                <h2 class="text-gray-400 font-bold uppercase text-xs tracking-wider">3-Point Health Audit</h2>
-                <div class="flex justify-between border-b pb-2">
-                    <span class="text-gray-600">Terminal Voltage</span>
-                    <span id="voltage" class="font-bold text-green-700 font-mono">--</span>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]">
+            
+            <div class="md:col-span-2 md:row-span-2 glass-card rounded-[2rem] p-8 border border-white/5 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-green-500 uppercase tracking-widest">System Health</span>
+                    <h2 class="text-6xl font-serif mt-4" id="status">Healthy</h2>
                 </div>
-                <div class="flex justify-between border-b pb-2">
-                    <span class="text-gray-600">Specific Gravity</span>
-                    <span id="gravity" class="font-bold text-green-700 font-mono">--</span>
-                </div>
-                <div class="flex justify-between border-b pb-2">
-                    <span class="text-gray-600">Physical Integrity</span>
-                    <span id="integrity" class="font-bold text-green-700">--</span>
+                <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                    <div class="bg-green-500 h-full w-[85%]"></div>
                 </div>
             </div>
 
-            <div class="space-y-6 bg-gray-50 p-6 rounded-xl">
-                <h2 class="text-gray-400 font-bold uppercase text-xs tracking-wider">Lifecycle Info</h2>
-                <p class="text-sm text-gray-600">Installation Date: <span id="installDate" class="font-bold text-gray-900">--</span></p>
-                <p class="text-sm text-gray-600">Expected End-of-Life: <span id="expiryDate" class="font-bold text-gray-900">--</span></p>
-                <div class="mt-4 p-4 bg-green-100 rounded-lg">
-                    <p class="text-xs text-green-800 font-bold">Estimated Buy-Back Value:</p>
-                    <p id="buyback" class="text-lg font-bold text-green-900">--</p>
-                </div>
+            <div class="glass-card rounded-[2rem] p-6 border border-white/5">
+                <span class="text-xs opacity-50 uppercase">Voltage</span>
+                <p class="text-3xl font-serif mt-2" id="voltage">--</p>
             </div>
-        </div>
 
-        <div class="p-8 border-t bg-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-xs text-gray-400">Owner: Power Link Authorized SME</p>
-            <button class="bg-black text-white px-6 py-3 rounded-xl font-bold text-sm w-full md:w-auto">Request Buy-Back Credit</button>
+            <div class="glass-card rounded-[2rem] p-6 border border-white/5">
+                <span class="text-xs opacity-50 uppercase">Specific Gravity</span>
+                <p class="text-3xl font-serif mt-2" id="gravity">--</p>
+            </div>
+
+            <div class="md:col-span-2 glass-card rounded-[2rem] p-6 border border-white/5 flex items-center justify-between">
+                <div>
+                    <span class="text-xs opacity-50 uppercase">Physical Integrity</span>
+                    <p class="text-2xl font-serif" id="integrity">Grade A Verified</p>
+                </div>
+                <div class="h-12 w-12 rounded-full border-2 border-green-500 flex items-center justify-center text-green-500">✓</div>
+            </div>
+
+            <div class="glass-card rounded-[2rem] p-6 border border-white/5">
+                <span class="text-xs opacity-50 uppercase">Expiry Date</span>
+                <p class="text-xl font-serif mt-2" id="expiryDate">--</p>
+            </div>
+
+            <div class="glass-card rounded-[2rem] p-6 border border-green-500/20 bg-green-500/5">
+                <span class="text-xs text-green-400 uppercase">Buy-Back Credit</span>
+                <p class="text-2xl font-serif mt-2" id="buyback">--</p>
+            </div>
         </div>
     </div>
 
