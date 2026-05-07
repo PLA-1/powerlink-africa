@@ -1,0 +1,56 @@
+/* Power Link Africa - Master Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #050505;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+/* THE LIVE SCREEN SAVER LAYER */
+.site-wrapper {
+    position: relative;
+    min-height: 100vh;
+    /* Your original background image */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('battery-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Animated Grid Overlay (The "Live" Part) */
+.live-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 0;
+    animation: moveGrid 20s linear infinite;
+}
+
+@keyframes moveGrid {
+    from { background-position: 0 0; }
+    to { background-position: 50px 50px; }
+}
+
+/* Glass Components */
+.glass-panel {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* Static Nav for Marketing Page */
+.nav-static {
+    position: static !important;
+    width: 100%;
+    margin-bottom: 2rem;
+}
